@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/portfolio/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/リポジトリ名/' : '/',
   plugins: [vue(), vueDevTools()],
   resolve: {
     alias: {
